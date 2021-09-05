@@ -13,14 +13,14 @@ router.post('/hireme', async (req, res, next) => {
         const secret = process.env.REACT_APP_RECAPTCHA_SECRET_KEY;
         const response = await axios.post(`https://www.google.com/recaptcha/api/siteverify?secret=${secret}&response=${result.token}`,)
         const {success} = response.data
-        // console.log(success)
+        console.log(success)
         if(success) {
             const email = result.email;
             const name = result.name;
             const message= result.message;
 
             const info = await mailer_helper({email,name,message})
-            // console.log("info-2: ",info)
+            console.log("info-2: ",info)
             if(info){
                 return res.send({success: true, message: 'All Ok'})
             }else{
