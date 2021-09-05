@@ -18,11 +18,11 @@ const mailer_helper = async (props)=>{
     
         try {
             transporter.sendMail(mailOptions, function(error, info){
-                // console.log("info-1:",info);
-                resolve(info);
+                console.log("info-1:",info);
+                resolve(info.response);
             });
         } catch (error) {
-            // console.log(error);
+            console.log(error);
             reject(error);
         }
     })

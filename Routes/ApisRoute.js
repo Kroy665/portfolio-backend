@@ -20,8 +20,8 @@ router.post('/hireme', async (req, res, next) => {
             const message= result.message;
 
             const info = await mailer_helper({email,name,message})
-            console.log("info-2: ",info.response)
-            if(info.response){
+            console.log("info-2: ",info)
+            if(info){
                 return res.send({success: true, message: 'All Ok'})
             }else{
                 return res.send({success: false, message: 'Email Cannot Send'})
