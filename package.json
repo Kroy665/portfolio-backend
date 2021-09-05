@@ -4,7 +4,7 @@
   "description": "Portfolio Backend",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "node server.js"
   },
   "author": "Koushik Roy",
   "license": "ISC",
@@ -26,5 +26,8 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.12"
+  },
+  "engines": {
+    "node": "12.18.3"
   }
 }

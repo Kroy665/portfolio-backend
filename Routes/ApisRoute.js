@@ -40,4 +40,13 @@ router.post('/hireme', async (req, res, next) => {
     }
 })
 
+router.get('/test', async (req, res, next)=>{
+    try {
+        res.send({"test":"Ok"})
+    } catch (error) {
+        next(error)
+    }
+})
+
+
 module.exports = router
