@@ -1,0 +1,10 @@
+# HireNe
+
+POST http://localhost:5000/api/hireme
+Content-Type: application/json
+
+{
+    "name": "test Name",
+    "email": "test",
+    "message": "test message"
+}
